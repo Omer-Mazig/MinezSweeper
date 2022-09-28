@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="mine-sweeper.css" />
+  </head>
+  <body onload="initGame()">
+    <div class="main-box">
+      <div class="best-time">Best Time: <span></span></div>
+      <div class="timer-box">
+        <p class="timer">
+          <span class="seconds">00</span>:<span class="tens">00</span>
+        </p>
+      </div>
+      <div class="buttons1">
+        <button class="diff-btn active-btn" onclick="setLevel(16, 2 ,this)">
+          Easy (16)
+        </button>
+        <button class="diff-btn" onclick="setLevel(64, 14 ,this)">
+          Moderate (64)
+        </button>
+        <button class="diff-btn" onclick="setLevel(144, 32 ,this)">
+          Hard (144)
+        </button>
+      </div>
+      <button onclick="toggleHint()" class="hint-btn">Toggle Hint</button>
+      <div class="hint">HINTS: <span></span></div>
+      <div class="life">LIFE: <span></span></div>
+      <button onclick="initGame()" class="smile">&#128512</button>
+      <table class="main-table">
+        <tbody class="board"></tbody>
+      </table>
+    </div>
+
+    <footer>Omer Mazig</footer>
+
+    <script src="mine-sweeper.js"></script>
+  </body>
+</html>
